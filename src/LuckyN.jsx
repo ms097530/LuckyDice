@@ -1,17 +1,23 @@
 import { useState } from "react"
-import { d6, getRolls, sum } from './utils'
+import { getRolls } from './utils'
 import Dice from './Dice'
 import './LuckyN.css'
 
-export default function LuckyN({ numDice = 2, goal = 7 })
+export default function LuckyN({ numDice = 2, winCheck, title })
 {
     const [dice, setDice] = useState(() => getRolls(numDice))
-    const isWinner = sum(dice) === goal
+    const isWinner = winCheck(dice)
+
+    const roll = () =>
+    {
+        setDice(getRolls(numDice))
+    }
 
     return (
         <section className="LuckyN">
-            <h1>Lucky{goal} {isWinner && "You win!"}</h1>
+            <h1>{title} {isWinner && "You win!"}</h1>
             <Dice dice={dice} />
+            <button onClick={roll}>Reroll</button>
         </section>
     )
 }
