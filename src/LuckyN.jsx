@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { getRolls } from './utils'
 import Dice from './Dice'
+import Button from "./Button"
 import './LuckyN.css'
 
 export default function LuckyN({ numDice = 2, winCheck, title })
@@ -17,7 +18,7 @@ export default function LuckyN({ numDice = 2, winCheck, title })
         <section className="LuckyN">
             <h1>{title} {isWinner && "You win!"}</h1>
             <Dice dice={dice} />
-            <button onClick={roll}>Reroll</button>
+            <Button text={"Reroll"} handleClick={roll} />
         </section>
     )
 }
