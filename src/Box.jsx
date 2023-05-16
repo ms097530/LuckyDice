@@ -1,8 +1,14 @@
+// import { useState } from 'react'
 import './Box.css'
 
-export default function Box()
+export default function Box({ isActive, handleClick, id })
 {
+    const toggleIsActive = () =>
+    {
+        handleClick(id)
+    }
+
     return (
-        <div>Box</div>
+        <div className="Box" onClick={toggleIsActive} style={{ backgroundColor: isActive ? 'red' : 'blue' }}></div>
     )
 }

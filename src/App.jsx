@@ -1,6 +1,7 @@
 import LuckyN from './LuckyN'
 import { sum } from './utils'
 import './App.css'
+import BoxGrid from './BoxGrid'
 
 function App()
 {
@@ -18,6 +19,7 @@ function App()
     <main>
       <LuckyN title="Lucky7" winCheck={isTotalSeven} />
       <LuckyN numDice={3} title="Game of Same" winCheck={areAllSame} />
+      <BoxGrid />
     </main>
   )
 }
