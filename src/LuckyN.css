@@ -1,7 +1,8 @@
-.Lucky7 {
-}
+.LuckyN
+{}
 
-.Lucky7-dice {
+.LuckyN-dice
+{
   border: solid 2px gray;
   padding: 1em 0 1em 0;
   text-align: center;
@@ -9,7 +10,8 @@
   border-radius: 10px;
 }
 
-.Lucky7-die {
+.LuckyN-die
+{
   background-color: seagreen;
   border-radius: 0;
   color: white;
